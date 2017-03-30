@@ -1,0 +1,198 @@
+
+@import 'base.less';
+@import 'variable.less';
+@import 'mixin.less';
+
+.overlay{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+
+	img{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 100px;
+		margin: -80px 0 0 -50px;
+	}
+}
+
+
+//侧边栏
+.aside{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 180px;
+	height: 100%;
+	background-color: #2f4050;
+
+	//个人资料
+	.profile{
+		height: 160px;
+		padding-top: 25px;
+		text-align: center;
+		background-color: #243443;
+
+		//头像
+		.avatar{
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+			overflow: hidden;
+			border: 3px solid rgba(255,255,255,0.3);
+		}
+		h4{
+			color:#a9b0c2;
+			font-size: 16px;
+		}
+	}
+
+	//导航菜单
+	.nav{
+		padding: 20px 0;
+
+		li a+ul{
+			display: none;
+			overflow: hidden; 
+		}
+
+		a {
+			width: 100%;
+			line-height: 1;
+			padding: 10px 20px;
+			margin: 4px 0;
+			color: #a9b0c2;
+
+			&:hover{
+				color: #f6f6f6;
+				background-color: #243443;
+			}
+		}
+
+		a+ul a{
+			padding-left: 46px;
+		}
+
+		.active{
+			color: #f6f6f6;
+			background-color: #243443;
+		}
+
+		i{
+			margin-right: 8px;
+		}
+
+		.arrow{
+			float: left;
+		}
+	}
+}
+
+
+//主体
+.main{
+	min-width: 844px;
+	padding: 72px 0 30px 180px;
+
+	//头部
+	.header{
+		width: 100%;
+		padding-left: 180px;
+		margin-left: -195px;
+		position: fixed;
+		top: 0;
+		z-index: 99;
+	
+		.navbar-custom{
+			padding-right: 15px;
+			background-color: #fff;
+			border-bottom: 1px solid #eee;
+			.border-radius(0);
+		}
+
+		.navbar-header{
+			float: left;
+		}
+		.navbar-right{
+			float: right!important;
+			margin-right: -15px;
+
+			li{
+				float: left;
+			}
+		}
+
+		.navbar-brand{
+			height: auto;
+			line-height: 1;
+			padding: 4px 6px;
+			margin: 12px 0 0 15px;
+			color: #fff;
+			background-color: #5cb85c;
+			.border-radius(2px);
+		}
+
+		.navbar-nav{
+			a{
+				position: relative;
+				background-color: transparent;
+			}
+
+			.fa{
+				font-size: 16px;
+			}
+
+			.badge{
+				line-height: 1;
+				padding: 2px 4px 3px;
+				background-color: #5cb85c;
+				position: absolute;
+				top: 8px;
+				left: 24px;
+				.border-radius(4px);
+			}
+		}
+
+	}
+
+
+	//主体
+	.body{}
+
+	//用户信息
+	.user-profile{}
+
+	//讲师管理
+	.teacher{}
+
+	//讲师资料
+	.teacher-profile{}
+
+	//创建课程
+	.course-add{}
+
+	//全部课程
+	.course-list{}
+
+	//课程分类
+	.course-category{}
+
+	//广告管理
+	.advert{}
+
+
+}
+
+
+//登陆
+.login{}
+
+#chapterModal{}
+
+#teacherModal{}
